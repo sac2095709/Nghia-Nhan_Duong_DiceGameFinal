@@ -13,4 +13,15 @@ package dicegamefinal;
  */
 public class DoubleDice extends Dice {
     
+    public DoubleDice() 
+    {
+        super(2);
+    }
+    
+@Override
+public String toString() 
+{
+    return "DoubleDice " + super.toString();
+}
+
 }
