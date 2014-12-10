@@ -14,7 +14,7 @@ package dicegamefinal;
 /**
  * The Class DoubleDice Implement MultiThread.
  */
-public class DoubleDiceImplementsRunnable {
+public class DoubleDiceImplementMultiThread {
 
 	/**
 	 * The main method.
