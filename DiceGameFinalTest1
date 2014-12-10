@@ -14,21 +14,26 @@ package dicegamefinal;
 public class DiceGameFinal {
 
     /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        Dice dx = new Dice();
-        DoubleDice ddx = new DoubleDice();
-        DoubleDice2 ddx2 = new DoubleDice2(36);
-        for (int i = 0; i < 36; i++) {
-            dx.Throw();
-            ddx.Throw();
-            ddx2.Throw();
-        }
-        System.out.println(dx);
-        System.out.println(ddx);
-        System.out.println(ddx2);
-
-
-    }
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
+	public static void main(String[] args) {
+		Dice dice = new Dice(1);
+		System.out.println(dice.toString());
+		Dice dice1 = new Dice(2);
+		System.out.println(dice1.toString());
+		Dice dice2 = new Dice(3);
+		System.out.println(dice2.toString());
+		Dice dice3 = new Dice(3);
+		System.out.println(dice3.toString());
+		Dice dice4 = new Dice(1);
+		System.out.println(dice4.toString());
+		Dice dice5 = new Dice(3);
+		System.out.println(dice5.toString());
+		Dice dice6 = new Dice(2);
+		System.out.println(dice6.toString());
+		Dice dice7 = new Dice(1);
+		System.out.println(dice7.toString());
+	}
 }
