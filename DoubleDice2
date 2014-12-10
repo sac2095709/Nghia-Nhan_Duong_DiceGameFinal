@@ -37,7 +37,7 @@ public class DoubleDice2 extends Dice implements Runnable {
 
     @Override
     public String toString() {
-        return "SingleDice " + super.toString();
+        return "DoubleDice " + super.toString();
     }
 
     @Override
