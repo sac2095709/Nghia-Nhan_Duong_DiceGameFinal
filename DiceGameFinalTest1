@@ -6,8 +6,6 @@
  */
 
 package dicegamefinal;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 /**
  *
@@ -19,13 +17,18 @@ public class DiceGameFinal {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    System.out.println("Starting Thread Pool");
-        ExecutorService thread = Executors.newCachedThreadPool();
-        for (int i = 0; i < 25; i++) {
-            DoubleDice ddx = new DoubleDice(String.valueOf(i));
-            thread.execute(ddx);
+        Dice dx = new Dice();
+        DoubleDice ddx = new DoubleDice();
+        DoubleDice2 ddx2 = new DoubleDice2(36);
+        for (int i = 0; i < 36; i++) {
+            dx.Throw();
+            ddx.Throw();
+            ddx2.Throw();
         }
-        thread.shutdown();
-        System.out.println("ThreadExecutor shutdown.");
+        System.out.println(dx);
+        System.out.println(ddx);
+        System.out.println(ddx2);
+
+
     }
 }
