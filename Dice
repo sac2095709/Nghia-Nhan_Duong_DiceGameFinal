@@ -1,0 +1,36 @@
+/*
+ * Nghia-Nhan D Duong
+ * CMPR112 - Java Programming
+ * Final Exam
+ * Dec 8th 2014
+ */
+
+package dicegamefinal;
+import java.util.Scanner;
+
+/**
+ *
+ * @author KenOne
+ */
+public class Dice {
+private int numOfThrows;
+    
+    public Dice()
+    {
+        numOfThrows = 0;
+    }
+    
+    public int getNumOfThrows()
+    {
+        return numOfThrows;
+    }
+    
+    public void addToThrows()
+    {
+        numOfThrows++;
+    }
+    
+    public void playGame()
+    {
+    }
+}
