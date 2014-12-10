@@ -1,0 +1,71 @@
+/*
+ * Nghia-Nhan D Duong
+ * CMPR112 - Java Programming
+ * Final Exam
+ * Dec 8th 2014
+ */
+
+package dicegamefinal;
+import java.util.Scanner;
+
+/**
+ *
+ * @author KenOne
+ */
+public class DiceGameFinal {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+    System.out.println("Welcome to the Dice Game!");
+        Scanner input = new Scanner(System.in);
+        String line;
+        int dice;
+        char character;
+        Dice myGame;
+        
+        while (true)
+        {
+            System.out.print("What number of dice would you like to play with? Please enter 1, 2, or 3: ");
+            line = input.nextLine();
+            character = line.charAt(0);
+        
+            while (character != '1' && character != '2' && character != '3')
+            {
+                System.out.print("\nInvalid input.  Please enter 1, 2, or 3: ");
+                line = input.nextLine();
+                character = line.charAt(0);
+            }
+            
+            dice = Integer.parseInt(line);
+            
+            System.out.println("\n");
+            if (dice == 1)
+            {
+                myGame = new OneDie();
+            }
+            else if (dice == 2)
+            {
+                myGame = new TwoDice();
+            }
+            else //dice == 3
+            {
+                myGame = new ThreeDice();
+            }
+            
+            myGame.playGame();
+            
+            System.out.println("\n\nIf you would like to play with a different number of dice, please enter 1.");
+            System.out.print("To quit, enter any other character: ");
+            line = input.nextLine();
+            character = line.charAt(0);
+            
+            if (character != '1')
+            {
+                break;
+            }
+            System.out.println("\n\n\n");
+        }
+    }
+}
