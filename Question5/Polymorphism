@@ -1,0 +1,12 @@
+Polymorphism is the capability of a method to do different things based on the object that it is acting upon. In other words, 
+polymorphism allows you define one interface and have multiple implementations. I know it sounds confusing. Don’t worry we 
+will discuss this in detail.
+
+It is a  feature that allows one interface to be used for a general class of  actions.
+An operation may exhibit different behavior in different instances.
+The behavior depends on the types of data used in the operation.
+It plays an important role in allowing objects having different internal structures to share the same external interface.
+Polymorphism is extensively used in implementing inheritance.
+Following concepts demonstrate different types of polymorphism in java.
+1) Method Overloading
+2) Method Overriding
