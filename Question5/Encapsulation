@@ -3,6 +3,8 @@ private and protected. A public member or method can be accessed from any other 
 only within its own class. Finally, a protected member is accessible within its class, its sub-classes and in all classes that
 reside in the same package.
 
+Example codes:
+
 public class Dice {
 private int numOfThrows;
     
