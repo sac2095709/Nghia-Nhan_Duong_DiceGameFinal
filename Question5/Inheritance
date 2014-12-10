@@ -1,0 +1,5 @@
+Java Inheritance defines an is-a relationship between a superclass and its subclasses. This means that an object of a subclass 
+can be used wherever an object of the superclass can be used. Class Inheritance in java mechanism is used to build new classes 
+from existing classes. The inheritance relationship is transitive: if class x extends class y, then a class z, which extends 
+class x, will also inherit from class y.
+
