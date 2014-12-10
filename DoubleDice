@@ -1,0 +1,16 @@
+/*
+ * Nghia-Nhan D Duong
+ * CMPR112 - Java Programming
+ * Final Exam
+ * Dec 8th 2014
+ */
+
+package dicegamefinal;
+
+/**
+ *
+ * @author KenOne
+ */
+public class DoubleDice extends Dice {
+    
+}
