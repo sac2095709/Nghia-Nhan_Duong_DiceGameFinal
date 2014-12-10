@@ -46,7 +46,7 @@ public class DoubleDice extends Dice implements Runnable {
 		DoubleDice dice = new DoubleDice();
 		System.out.println(dice.toString());
 	}
-	
+
 	/* (non-Javadoc)
 	 * @see Dice#toString()
 	 */
@@ -61,7 +61,12 @@ public class DoubleDice extends Dice implements Runnable {
 	 */
 	@Override
 	public void run() {
-		System.out.println(" Thread Running " + threadName +" " +toString());
+		try {
+			System.out.println(" Thread Running " + threadName +" " +toString());
+			Thread.sleep(500);
+		} catch(Exception e) {
+
+		}
 	}
 
 }
