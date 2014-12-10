@@ -13,31 +13,68 @@ import java.util.Random;
  * @author KenOne
  */
 public class Dice {
-private int dices;
-    private String hist;
-    public static final Random rand = new Random();
+/** The no of dice. */
+	private int noOfDice;
 
-    public Dice(int d) {
-        dices = d;
-        hist = "";
-    }
+	/** The min. */
+	int min =1;
+	
+	/** The max. */
+	int max=6;
 
-    public Dice() {
-        this(1);
-    }
+	/** The random. */
+	private Random random = new Random();
 
-    public int Throw() {
-        int value = rand.nextInt((6 * dices - dices) + 1) + dices;   // ((max - min) + 1) + min;
-        if (hist.isEmpty()) {
-            hist += value + "";
-        } else {
-            hist += ", " + value;
-        }
-        return value;
-    }
+	/**
+	 * Instantiates a new dice.
+	 */
+	public Dice() {
+	}
 
-    @Override
-    public String toString() {
-        return "Roll History: " + hist;
-    }
+	/**
+	 * Instantiates a new dice.
+	 *
+	 * @param noOfDice the no of dice
+	 */
+	public Dice(int noOfDice) {
+		super();
+		this.noOfDice = noOfDice;
+	}
+
+	/**
+	 * Gets the no of dice.
+	 *
+	 * @return the no of dice
+	 */
+	public int getNoOfDice() {
+		return noOfDice;
+	}
+
+	/**
+	 * Sets the no of dice.
+	 *
+	 * @param noOfDice the new no of dice
+	 */
+	public void setNoOfDice(int noOfDice) {
+		this.noOfDice = noOfDice;
+	}
+
+
+	/**
+	 * Throw.
+	 *
+	 * @return the int
+	 */
+	public int Throw(){
+		max = (max*getNoOfDice());
+		return random.nextInt(max-min+1)+min;
+	}
+
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
+	@Override
+	public String toString() {
+		return "No Of Dice : "+noOfDice + " Value : "+Throw();
+	}
 }
