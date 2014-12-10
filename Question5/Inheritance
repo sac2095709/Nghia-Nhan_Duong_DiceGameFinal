@@ -3,3 +3,11 @@ can be used wherever an object of the superclass can be used. Class Inheritance 
 from existing classes. The inheritance relationship is transitive: if class x extends class y, then a class z, which extends 
 class x, will also inherit from class y.
 
+Example code: 
+
+public class DoubleDice extends Dice {
+    
+    public DoubleDice() 
+    {
+        super(2);
+    }
