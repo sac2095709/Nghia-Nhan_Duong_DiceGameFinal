@@ -13,10 +13,12 @@ Following concepts demonstrate different types of polymorphism in java.
 
 
 Example codes:
-		setNoOfDice(2);
 
-******************
- @Override
+
+	/* (non-Javadoc)
+	 * @see Dice#toString()
+	 */
+	@Override
 	public String toString() {
 		return "No Of Dice : 2 Value : "+Throw();
 	}
@@ -33,6 +35,5 @@ Example codes:
 		} catch(Exception e) {
 
 		}
-	}
 
 }
