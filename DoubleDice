@@ -11,17 +11,57 @@ package dicegamefinal;
  *
  * @author KenOne
  */
-public class DoubleDice extends Dice {
-    
-    public DoubleDice() 
-    {
-        super(2);
-    }
-    
-@Override
-public String toString() 
-{
-    return "DoubleDice " + super.toString();
-}
+/**
+ * The Class DoubleDice.
+ */
+public class DoubleDice extends Dice implements Runnable {
+
+
+	/** The thread name. */
+	String threadName;
+
+	/**
+	 * Instantiates a new double dice.
+	 */
+	public DoubleDice() {
+		setNoOfDice(2);
+	}
+
+	/**
+	 * Instantiates a new double dice.
+	 *
+	 * @param threadName the thread name
+	 */
+	public DoubleDice(String threadName) {
+		setNoOfDice(2);
+		this.threadName = threadName;
+	}
+
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
+	public static void main(String[] args) {
+		DoubleDice dice = new DoubleDice();
+		System.out.println(dice.toString());
+	}
+	
+	/* (non-Javadoc)
+	 * @see Dice#toString()
+	 */
+	@Override
+	public String toString() {
+		return "No Of Dice : 2 Value : "+Throw();
+	}
+
+
+	/* (non-Javadoc)
+	 * @see java.lang.Runnable#run()
+	 */
+	@Override
+	public void run() {
+		System.out.println(" Thread Running " + threadName +" " +toString());
+	}
 
 }
