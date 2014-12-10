@@ -6,24 +6,59 @@ reside in the same package.
 Example codes:
 
 public class Dice {
-private int numOfThrows;
-    
-    public Dice()
-    {
-        numOfThrows = 0;
-    }
-    
-    public int getNumOfThrows()
-    {
-        return numOfThrows;
-    }
-    
-    public void addToThrows()
-    {
-        numOfThrows++;
-    }
-    
-    public void playGame()
-    {
-    }
-}
+        /** The no of dice. */
+	private int noOfDice;
+
+	/** The min. */
+	int min =1;
+	
+	/** The max. */
+	int max=6;
+
+	/** The random. */
+	private Random random = new Random();
+
+	/**
+	 * Instantiates a new dice.
+	 */
+	public Dice() {
+	}
+
+	/**
+	 * Instantiates a new dice.
+	 *
+	 * @param noOfDice the no of dice
+	 */
+	public Dice(int noOfDice) {
+		super();
+		this.noOfDice = noOfDice;
+	}
+
+	/**
+	 * Gets the no of dice.
+	 *
+	 * @return the no of dice
+	 */
+	public int getNoOfDice() {
+		return noOfDice;
+	}
+
+	/**
+	 * Sets the no of dice.
+	 *
+	 * @param noOfDice the new no of dice
+	 */
+	public void setNoOfDice(int noOfDice) {
+		this.noOfDice = noOfDice;
+	}
+
+
+	/**
+	 * Throw.
+	 *
+	 * @return the int
+	 */
+	public int Throw(){
+		max = (max*getNoOfDice());
+		return random.nextInt(max-min+1)+min;
+	}
