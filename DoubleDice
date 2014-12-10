@@ -20,6 +20,8 @@ public class DoubleDice extends Dice implements Runnable {
 	/** The thread name. */
 	String threadName;
 
+	/** The no of dice. */
+	int noOfDice=2;
 	/**
 	 * Instantiates a new double dice.
 	 */
@@ -27,13 +29,20 @@ public class DoubleDice extends Dice implements Runnable {
 		setNoOfDice(2);
 	}
 
+	/* (non-Javadoc)
+	 * @see Dice#setNoOfDice(int)
+	 */
+	@Override
+	public void setNoOfDice(int noOfDice) {
+		super.setNoOfDice(noOfDice);
+	}
 	/**
 	 * Instantiates a new double dice.
 	 *
 	 * @param threadName the thread name
 	 */
 	public DoubleDice(String threadName) {
-		setNoOfDice(2);
+		super.setNoOfDice(noOfDice);
 		this.threadName = threadName;
 	}
 
