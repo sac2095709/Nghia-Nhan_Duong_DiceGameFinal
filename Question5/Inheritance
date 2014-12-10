@@ -5,9 +5,35 @@ class x, will also inherit from class y.
 
 Example code: 
 
-public class DoubleDice extends Dice {
-    
-    public DoubleDice() 
-    {
-        super(2);
-    }
+public class DoubleDice extends Dice implements Runnable {
+
+
+	/** The thread name. */
+	String threadName;
+
+	/**
+	 * Instantiates a new double dice.
+	 */
+	public DoubleDice() {
+		setNoOfDice(2);
+	}
+
+	/**
+	 * Instantiates a new double dice.
+	 *
+	 * @param threadName the thread name
+	 */
+	public DoubleDice(String threadName) {
+		setNoOfDice(2);
+		this.threadName = threadName;
+	}
+
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
+	public static void main(String[] args) {
+		DoubleDice dice = new DoubleDice();
+		System.out.println(dice.toString());
+	}
