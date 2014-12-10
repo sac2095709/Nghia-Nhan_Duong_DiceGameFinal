@@ -10,3 +10,18 @@ Polymorphism is extensively used in implementing inheritance.
 Following concepts demonstrate different types of polymorphism in java.
 1) Method Overloading
 2) Method Overriding
+
+
+Example codes:
+
+ @Override
+    public String toString() {
+        return "DoubleDice " + super.toString();
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i < 36; i++) {
+            add(super.Throw());
+        }
+    }
